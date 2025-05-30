@@ -1,0 +1,135 @@
+/* DIV SWING */
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(2deg);
+    }
+
+    20% {
+        transform: rotate(-2deg);
+    }
+
+    30% {
+        transform: rotate(3deg);
+    }
+
+    40% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    60% {
+        transform: rotate(-2deg);
+    }
+
+    70% {
+        transform: rotate(1deg);
+    }
+
+    80% {
+        transform: rotate(-1deg);
+    }
+
+    90% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+.animate-swing {
+    animation: swing 4s ease-in-out forwards;
+}
+
+/* DIV FALL */
+@keyframes fall {
+    0% {
+        transform: rotate(3deg) translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(10deg) translateY(400px);
+        opacity: 0;
+    }
+}
+
+.animate-fall {
+    animation: fall 1s ease-in forwards;
+}
+
+/* PIN FALL */
+
+@keyframes pin-fall {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translate(10px, -20px) rotate(20deg);
+    }
+
+    40% {
+        transform: translate(20px, -40px) rotate(45deg);
+    }
+
+    60% {
+        transform: translate(30px, -20px) rotate(90deg);
+    }
+
+    80% {
+        transform: translate(40px, 100px) rotate(150deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(50px, 300px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pin-jump-fall-left {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translate(-10px, -20px) rotate(-20deg);
+    }
+
+    40% {
+        transform: translate(-20px, -40px) rotate(-45deg);
+    }
+
+    60% {
+        transform: translate(-30px, -20px) rotate(-90deg);
+    }
+
+    80% {
+        transform: translate(-40px, 100px) rotate(-150deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50px, 300px) rotate(-180deg);
+        opacity: 0;
+    }
+}
+
+.animate-pin-fall {
+    animation: pin-fall 1s ease-in forwards;
+}
+
+.animate-pin-fall-left {
+    animation: pin-jump-fall-left 1s ease-in forwards;
+}

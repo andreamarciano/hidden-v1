@@ -1,0 +1,128 @@
+/* Melt */
+@keyframes melt {
+    0% {
+        transform: scaleY(1) translateY(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    100% {
+        transform: scaleY(2) translateY(50px);
+        opacity: 0;
+        filter: blur(4px);
+    }
+}
+
+.animate-melt {
+    animation: melt 2s ease-in-out forwards;
+}
+
+/* Shake */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(1px, -1px);
+    }
+
+    60% {
+        transform: translate(-1px, 1px);
+    }
+
+    80% {
+        transform: translate(1px, -1px);
+    }
+}
+
+.animate-shake {
+    animation: shake 0.3s infinite;
+}
+
+/* Lava Lapilli */
+@keyframes lapilli {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+
+    30% {
+        transform: translateY(-30px) scale(1.2);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateY(-60px) scale(0.8);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+}
+
+.animate-lapilli {
+    animation: lapilli 1.5s ease-out infinite;
+}
+
+/* Drip */
+@keyframes dripChunk {
+    0% {
+        transform: translateY(0) scaleX(1) scaleY(1);
+        border-radius: 30% 30% 50% 50%;
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateY(10px) scaleX(1.1) scaleY(1.1);
+        border-radius: 40% 40% 60% 60%;
+    }
+
+    100% {
+        transform: translateY(60px) scaleX(0.9) scaleY(1.4);
+        border-radius: 60% 40% 80% 70%;
+        opacity: 0;
+    }
+}
+
+.drip-chunk {
+    position: absolute;
+    bottom: -2px;
+    border-radius: 40% 40% 60% 60%;
+    opacity: 1;
+    animation: dripChunk 2.5s ease-in forwards;
+    z-index: 5;
+}
+
+.rotate-drip-left {
+    transform: rotate(-30deg);
+}
+
+.rotate-drip-right {
+    transform: rotate(40deg);
+}
+
+/* Steam */
+@keyframes steam-rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(-60px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.animate-steam {
+    animation: steam-rise 1.5s ease-out forwards;
+}

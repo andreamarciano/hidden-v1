@@ -1,0 +1,34 @@
+/* TrashBin.css */
+@keyframes trashTilt {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.trash-tilt {
+    animation: trashTilt 1.2s ease-in-out forwards;
+}
+
+@keyframes letterFall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(80px) scale(0.9);
+    }
+}
+
+.animate-letter-fall {
+    animation: letterFall 0.8s ease-in forwards;
+}
