@@ -18,6 +18,8 @@ The system consists of:
 
   - **`FallingDiv`**: A component that simulates a paper held by two pins. When one pin is removed, it swings and then falls. Its text content is extracted and sent to the trash.
 
+  - **`MeltingDiv`**: A heat-reactive block. When the user hovers over it, the component gradually "heats up". If hovered for 5 seconds, it begins to melt, releasing steam, dripping colored chunks, and finally disappearing — at which point its text is extracted and sent to the trash.
+
 - `TrashBin`: A bouncing trash can icon. Clicking it dumps the collected letters into the **TrashCollector**.
 - `TrashCollector`: The visual "floor" where letters scatter — but intentionally **avoid** certain areas, leaving a negative-space outline of a word.
 - `TrashContext`: Centralized state using **React Context API** to manage all letters in motion or dumped.
@@ -88,6 +90,15 @@ As more letters fall, the masked areas remain empty, and the secret word **emerg
 
 - Click a pin → swing animation → fall → extract text.
 - Adds text to trash automatically when falling.
+
+### `MeltingDiv.jsx`
+
+- On mouse hover, gradually increases "heat level" with a smooth color transition from yellow to red.
+- If hovered continuously for 5 seconds, triggers the melting phase.
+- During melting, the div visually "melts": it shakes, drips colored chunks, emits steam particles, and slowly disappears.
+- After melting animation completes (~2 seconds), extracts its text content and adds it to the trash context.
+- Plays looping lava bubbling sound while heating and one-shot sounds for melting and steam effects.
+- If mouse leaves before melting threshold, the heat level decreases gradually and the div "cools down."
 
 ### 🗑️ `TrashBin.jsx`
 
