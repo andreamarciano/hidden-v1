@@ -93,6 +93,8 @@ As more letters fall, the masked areas remain empty, and the secret word **emerg
 - Click a pin → swing animation → fall → extract text.
 - Adds text to trash automatically when falling.
 
+![Falling](../../../public/images/about/fallingDiv.webp)
+
 ### `MeltingDiv.jsx`
 
 - On mouse hover, gradually increases "heat level" with a smooth color transition from yellow to red.
@@ -102,19 +104,18 @@ As more letters fall, the masked areas remain empty, and the secret word **emerg
 - Plays looping lava bubbling sound while heating and one-shot sounds for melting and steam effects.
 - If mouse leaves before melting threshold, the heat level decreases gradually and the div "cools down."
 
+![Melting](../../../public/images/about/meltingDiv.webp)
+
 ### `TiltDiv.jsx`
 
 - Click and drag vertically on the side handle to tilt the container.
-
 - As the tilt angle increases, a threshold triggers the "release" phase.
-
 - Letters fall one by one from the tilted text block with randomized rotation and offset.
-
 - Letters are collected into the trash context as they fall.
-
 - Plays a looping falling sound while the component is tilted past threshold.
-
 - Releasing the mouse resets the tilt angle and stops any sound/animation in progress.
+
+![Tilt](../../../public/images/about/tiltDiv.webp)
 
 ### 🗑️ `TrashBin.jsx`
 
@@ -127,6 +128,8 @@ As more letters fall, the masked areas remain empty, and the secret word **emerg
 - Letters scatter into random positions, avoiding masked zones.
 - Visual output where the hidden word appears through negative space.
 
+![Collector](../../../public/images/about/emptyBin.webp)
+
 ### `TrashContext.jsx`
 
 - Holds global letter state:
@@ -136,6 +139,8 @@ As more letters fall, the masked areas remain empty, and the secret word **emerg
   - `dumpedLetters`: placed on floor
 
 - Responsible for applying mask exclusion logic.
+
+![Word](../../../public/images/about/fullBin.webp)
 
 ---
 
