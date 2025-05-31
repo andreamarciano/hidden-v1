@@ -1,4 +1,23 @@
-/* TrashBin.css */
+/* Bouncing Bin */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-200%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-bin {
+  animation: bounce 1s infinite;
+}
+
+/* Tilt Bin */
 @keyframes trashTilt {
     0% {
         transform: rotate(0deg);
@@ -17,6 +36,7 @@
     animation: trashTilt 1.2s ease-in-out forwards;
 }
 
+/* Drop Letters */
 @keyframes letterFall {
     0% {
         opacity: 1;

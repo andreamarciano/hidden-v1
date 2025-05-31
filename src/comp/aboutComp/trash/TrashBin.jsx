@@ -11,6 +11,8 @@ const TrashBin = () => {
     if (pendingLetters.length === 0) return;
     setIsDumping(true);
 
+    playSound("dump");
+
     // ~160°
     setTimeout(() => {
       dumpTrash();
@@ -21,12 +23,25 @@ const TrashBin = () => {
     }, 1200);
   };
 
+  const soundURL = {
+    dump: { src: "/sounds/about/trashFalling.mp3", volume: 0.8 },
+  };
+
+  const playSound = (key) => {
+    const sound = soundURL[key];
+    if (!sound) return;
+
+    const audio = new Audio(sound.src);
+    audio.volume = sound.volume ?? 1.0;
+    audio.play();
+  };
+
   return (
     <div className="flex justify-center mt-8 relative h-2 w-max">
       <div
         onClick={handleClick}
         className={`text-4xl cursor-pointer relative left-10 z-10 duration-300 ${
-          pendingLetters.length > 0 && !isDumping ? "animate-bounce" : ""
+          pendingLetters.length > 0 && !isDumping ? "animate-bounce-bin" : ""
         } ${isDumping ? "trash-tilt" : ""}`}
       >
         <img
