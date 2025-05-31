@@ -1,4 +1,4 @@
-# 🔠 Hidden Word Trash Collector - React + Context API
+# Hidden Word Trash Collector - React + Context API
 
 This project implements a playful animation system where discarded letters "fall" into a trash bin and gradually reveal a **hidden word** through **negative space**. As users interact with different components, letters are collected and visually scattered — **avoiding specific masked areas** that form the contours of a secret word.
 
@@ -19,6 +19,8 @@ The system consists of:
   - **`FallingDiv`**: A component that simulates a paper held by two pins. When one pin is removed, it swings and then falls. Its text content is extracted and sent to the trash.
 
   - **`MeltingDiv`**: A heat-reactive block. When the user hovers over it, the component gradually "heats up". If hovered for 5 seconds, it begins to melt, releasing steam, dripping colored chunks, and finally disappearing — at which point its text is extracted and sent to the trash.
+
+  - **`TiltDiv`**: A draggable container that can be tilted by clicking and dragging a vertical handle. As the tilt angle increases, once a threshold is passed, letters start falling out of the rotated content one by one, with randomized trajectories. The falling letters are collected and sent to the trash while accompanied by a looping falling sound effect. Releasing the mouse resets the angle. Only tilting past the activation threshold triggers letter extraction.
 
 - `TrashBin`: A bouncing trash can icon. Clicking it dumps the collected letters into the **TrashCollector**.
 - `TrashCollector`: The visual "floor" where letters scatter — but intentionally **avoid** certain areas, leaving a negative-space outline of a word.
@@ -99,6 +101,20 @@ As more letters fall, the masked areas remain empty, and the secret word **emerg
 - After melting animation completes (~2 seconds), extracts its text content and adds it to the trash context.
 - Plays looping lava bubbling sound while heating and one-shot sounds for melting and steam effects.
 - If mouse leaves before melting threshold, the heat level decreases gradually and the div "cools down."
+
+### `TiltDiv.jsx`
+
+- Click and drag vertically on the side handle to tilt the container.
+
+- As the tilt angle increases, a threshold triggers the "release" phase.
+
+- Letters fall one by one from the tilted text block with randomized rotation and offset.
+
+- Letters are collected into the trash context as they fall.
+
+- Plays a looping falling sound while the component is tilted past threshold.
+
+- Releasing the mouse resets the tilt angle and stops any sound/animation in progress.
 
 ### 🗑️ `TrashBin.jsx`
 

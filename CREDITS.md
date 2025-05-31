@@ -22,4 +22,12 @@
   By **freesound_community**
   Downloaded on May 30th, 2025 from [pixabay](https://pixabay.com/users/freesound_community-46691455/)
 
+- **Rocks Falling**
+  By **freesound_community**
+  Downloaded on May 31th, 2025 from [pixabay](https://pixabay.com/users/freesound_community-46691455/)
+
+- **Dropping Books**
+  By **freesound_community**
+  Downloaded on May 31th, 2025 from [pixabay](https://pixabay.com/users/freesound_community-46691455/)
+
 > All above assets, images, and sounds used are either in the public domain (CC0) or free to use under their respective licenses. Where possible, authors have been credited.
