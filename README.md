@@ -7,6 +7,8 @@ Currently, the word **"HIDE5"** is being revealed.
 > **Technologies used**:
 > **React**, **Context API**, **Tailwind CSS**, **Custom CSS Animations** (fall, tilt)
 
+> https://www.youtube.com/watch?v=0MFevzcYx4s
+
 ---
 
 ## 🧩 Overview
